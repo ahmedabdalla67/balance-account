@@ -37,10 +37,16 @@ class RootAccounts extends StatelessWidget {
                         (index) => DataRow(
                               cells: [
                                 DataCell(onTap: () {
-                                  dialog(context, 'acount', 'balalnce');
+                                  dialog(
+                                      context,
+                                      accounts[index].topLevelAccount,
+                                      accounts[index].totalBalance.toString());
                                 }, Text(accounts[index].topLevelAccount)),
                                 DataCell(onTap: () {
-                                  dialog(context, 'acount', 'balalnce');
+                                  dialog(
+                                      context,
+                                      accounts[index].topLevelAccount,
+                                      accounts[index].totalBalance.toString());
                                 },
                                     Text(accounts[index]
                                         .totalBalance
