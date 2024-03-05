@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocProvider(
       create: (context) => MyCubit()..getRootAccounts(),
-      child: MaterialApp(
+      child: const MaterialApp(
         title: 'Flutter Demo',
         home: RootAccounts(),
       ),

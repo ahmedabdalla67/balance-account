@@ -28,6 +28,9 @@ class RootAccounts extends StatelessWidget {
                 // ),
 
                 DataTable(
+                    border: TableBorder.all(),
+                    dataRowColor:
+                        MaterialStatePropertyAll(Colors.grey.withOpacity(0.6)),
                     columns: const [
                       DataColumn(label: Text('Top Level Account')),
                       DataColumn(label: Text('Total Balance')),
@@ -127,7 +130,7 @@ class RootAccounts extends StatelessWidget {
                   onPressed: () {
                     Navigator.pop(context);
                   },
-                  child: Text('OK'))
+                  child: const Text('OK'))
             ],
           );
         });

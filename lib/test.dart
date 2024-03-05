@@ -15,7 +15,7 @@ class TestTable extends StatelessWidget {
         padding: const EdgeInsets.all(8.0),
         child: BlocBuilder<MyCubit, GetAcountStates>(
           builder: (context, state) {
-            print('data ${MyCubit.get(context).listOfAccount.length}');
+            // print('data ${MyCubit.get(context).listOfAccount.length}');
             return Column(
               children: [
                 Container(
@@ -25,7 +25,7 @@ class TestTable extends StatelessWidget {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
-                        Text(
+                        const Text(
                           'Top Level Account',
                           style: TextStyle(fontWeight: FontWeight.bold),
                         ),
@@ -34,7 +34,7 @@ class TestTable extends StatelessWidget {
                           height: 23,
                           color: Colors.grey,
                         ),
-                        Text(
+                        const Text(
                           'Total Balance',
                           style: TextStyle(fontWeight: FontWeight.bold),
                         ),
@@ -43,7 +43,7 @@ class TestTable extends StatelessWidget {
                   ),
                 ),
                 buildRowsTable(context, MyCubit.get(context).listOfAccount),
-                Spacer(
+                const Spacer(
                   flex: 2,
                 ),
               ],
@@ -67,17 +67,17 @@ class TestTable extends StatelessWidget {
                 children: [
                   Text(
                     accounts[index].topLevelAccount.toString(),
-                    style: TextStyle(fontWeight: FontWeight.bold),
+                    style: const TextStyle(fontWeight: FontWeight.bold),
                   ),
                   Text(
                     accounts[index].totalBalance.toString(),
-                    style: TextStyle(fontWeight: FontWeight.bold),
+                    style: const TextStyle(fontWeight: FontWeight.bold),
                   ),
                 ],
               ),
             );
           },
-          separatorBuilder: (context, index) => Divider(
+          separatorBuilder: (context, index) => const Divider(
             color: Colors.grey,
             thickness: 1,
           ),
