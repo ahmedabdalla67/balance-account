@@ -1,13 +1,12 @@
 class Data {
-  final String account;
-  final String balance;
+  final String topLevelAccount;
+  final double totalBalance;
 
-  Data({required this.account, required this.balance});
+  Data({required this.topLevelAccount, required this.totalBalance});
+
+  factory Data.fromJson(Map<String, dynamic> json) {
+    return Data(
+        topLevelAccount: json['top_Level_Account'],
+        totalBalance: json['total_Balance']);
+  }
 }
-
-List<Data> data = [
-  Data(account: '1', balance: '100'),
-  Data(account: '2', balance: '250'),
-  Data(account: '3', balance: '300'),
-  Data(account: '4', balance: '400'),
-];
